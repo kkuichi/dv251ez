@@ -1,0 +1,333 @@
+.modal-backdrop {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ) !important; /* Light background color */
+  opacity: 1 !important; /* Make it fully opaque */
+  z-index: 1000 !important; /* Ensure it stays below modal if needed */
+}
+
+.modal-overlay {
+  position: fixed; /* Cover entire screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(253, 253, 253, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center; /* Center modal */
+  align-items: center; /* Center modal vertically */
+  z-index: 1000; /* Ensure it appears above everything else */
+}
+
+.modal-container {
+  background-color: rgb(247, 247, 247);
+  border-radius: 8px;
+  padding: 0.5vw;
+  z-index: 1001; /* Ensure the modal is on top of the backdrop */
+  position: fixed; /* Make sure modal stays in place */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+  width: 100%;
+  max-width: 28vw;
+  max-height: 60vw;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 0.8vw;
+}
+
+.form-control::placeholder {
+  font-size: 0.7vw; /* Adjust the font size as needed */
+}
+
+.form-control {
+  padding-top: 0.2vw !important;
+  padding-bottom: 0.2vw !important;
+}
+
+.modal-close {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 24px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #af3838;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.modal-content {
+  margin-bottom: 1vw;
+}
+
+.mb3 {
+  margin-bottom: 5px; /* Space between input fields */
+}
+
+.mb3 input[type="checkbox"] {
+  margin-right: 10px; /* Adjust the space between the checkbox and label */
+  transform: scale(1.1); /* Make the checkbox larger */
+}
+
+.mb3 label {
+  font-size: 0.8vw;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Column layout for the form */
+}
+
+input {
+  margin-bottom: 0.2vw !important; /* Space between the form elements */
+  font-size: 1vw !important; /* Adjust the font size as needed */
+}
+
+.RegButton {
+  padding: 0.6vw;
+  font-size: 0.9vw;
+  font-weight: 500;
+  background-color: #4f84e7;
+  color: white;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  margin-top: 1vw;
+}
+
+.ResDelButton {
+  padding: 0.6vw;
+  font-size: 0.9vw;
+  font-weight: 500;
+  background-color: rgba(179, 61, 15, 0.856);
+  color: white;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  margin-top: 0.5vw;
+  width: 100%;
+}
+
+.RegButton:hover {
+  background-color: #3963b3 !important;
+  box-shadow: none !important;
+}
+
+.ResDelButton:hover {
+  background-color: rgba(128, 42, 9, 0.7) !important;
+  box-shadow: none !important;
+}
+
+.heading {
+  margin-bottom: 1vw;
+  font-size: 1.5vw;
+}
+
+.regcontainer {
+  padding: 0; /* Reduce padding inside the container */
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.info-icon {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  color: #4f84e7;
+  font-size: 0.8vw;
+}
+
+.info-icon::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.836);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 0.8rem;
+  width: max-content;
+  max-width: 200px; /* Adjust max-width as needed */
+  text-align: center;
+  word-wrap: break-word; /* Ensure text wraps to the next line */
+  white-space: normal;
+}
+
+.info-icon:hover::before {
+  opacity: 1;
+}
+
+.register-devider {
+  display: flex;
+  margin-top: -0.5vw !important;
+  width: 100% !important;
+  height: 1px !important;
+  background-color: #d3d3d3 !important;
+}
+
+.register-info-req-fields {
+  font-size: 0.8vw;
+}
+
+.info-modal-content {
+  max-height: 80vh; /* Adjust the max-height as needed */
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.tabs-menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1vw;
+}
+
+.tabs-menu-button {
+  padding: 0.5vw 1vw;
+  border: none;
+  /* background-color: rgba(255, 255, 255, 0);
+  border-left: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255); */
+  cursor: pointer;
+  font-size: 0.8vw;
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+.tabs-menu-button:hover {
+  background-color: rgb(78, 99, 141) !important;
+  color: white;
+}
+
+.number-steps {
+  text-align: left;
+  padding-left: 1vw;
+  padding-top: 1vw;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.article-heading {
+  font-size: 1.1vw;
+  margin-top: 1.5vw;
+  font-weight: 400;
+}
+
+.info-modal-heading {
+  font-size: 1.5vw;
+  margin-top: -1vw;
+  margin-bottom: 1vw;
+}
+
+.GDPR-checkbox {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .modal-content {
+    margin-top: 1vw;
+  }
+  .regcontainer {
+    padding: 0; /* Reduce padding inside the container */
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .modal-container {
+    max-width: 40vw;
+    max-height: 200vw;
+    font-size: 1.3vw;
+  }
+
+  .heading {
+    font-size: 1.8vw;
+  }
+
+  .RegButton {
+    border-radius: 1vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+  }
+
+  input {
+    margin-bottom: 0.2vw !important; /* Space between the form elements */
+    font-size: 1.5vw !important; /* Adjust the font size as needed */
+  }
+
+  input::placeholder {
+    font-size: 1.5vw !important; /* Adjust the placeholder text size as needed */
+  }
+
+  .mb3 label {
+    font-size: 1.5vw;
+  }
+
+  .register-info-req-fields {
+    font-size: 1.5vw;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .modal-content {
+    margin-top: 1vw;
+  }
+  .regcontainer {
+    padding: 0; /* Reduce padding inside the container */
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .modal-container {
+    top: 45%;
+    max-width: 55vw;
+    max-height: 200vw;
+    font-size: 1.5vw;
+  }
+
+  .heading {
+    font-size: 2vw;
+  }
+
+  input {
+    margin-bottom: 0.1vw !important; /* Space between the form elements */
+    font-size: 2vw !important;
+  }
+
+  input::placeholder {
+    font-size: 1.5vw !important; /* Adjust the placeholder text size as needed */
+  }
+
+  .RegButton {
+    border-radius: 1vw;
+    padding: 1vw;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .regcontainer {
+    max-width: 100%; /* Full width on extra small screens */
+  }
+}
